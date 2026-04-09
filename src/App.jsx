@@ -109,7 +109,7 @@ function App() {
       <h1> To Do Input</h1>
 
       <div className="inputbox ">
-        <input type="text" placeholder='Add task' value={task} onChange={(e) => setTask(e.target.value)} />
+        <input type="text" placeholder='Add task' value={task} onChange={(e) => setTask(e.target.value)}   onKeyDown={(e) => {if (e.key === "Enter") {addtask();}}} />
 
         <button onClick={addtask}>{edit != null ? "Update Task" : "Add Task"}</button>
       </div>
